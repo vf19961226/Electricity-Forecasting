@@ -1,4 +1,4 @@
-# Electricity-Forecasting-DSAI-HW1-
+# Electricity-Forecasting
 ## 簡介
 使用台灣電力公司提供之過去電力供需資訊搭配天氣資料以及是否為上班日，並基於長短期記憶（Long Short-Term Memory，LSTM）建立一預測模型，用以預測未來七天之電力備轉容量。
 ## 使用數據
