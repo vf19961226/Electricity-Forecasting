@@ -47,7 +47,7 @@ for date in data:
 fig, ax = plt.subplots(1,1)
 ax.plot(xpt[1:],supply_pw,label='Supply Power',color='g')#以綠線表示淨尖峰供應電力
 ax.plot(xpt[1:],load_pw,label='Load Power',color='r')#以紅線表示尖峰負載
-ax.xaxis.set_major_locator(ticker.MultipleLocator(30))
+ax.xaxis.set_major_locator(ticker.MultipleLocator(30))#設定X軸標籤每30比顯示1比
 plt.xlabel('Date')
 plt.xticks(rotation='vertical')
 plt.ylabel('Power(MW)')
@@ -100,13 +100,13 @@ tainan=np.asarray(tainan)
 kaohsiung=np.asarray(kaohsiung)            
 '''
 fig, ax = plt.subplots(1,1)
-ax.plot(xpt[1:],taipei,label=city[0],color='g')#以綠線表示淨尖峰供應電力
-ax.plot(xpt[1:],new_taipei,label=city[1],color='r')#以紅線表示尖峰負載
-ax.plot(xpt[1:],taoyuan,label=city[2],color='b')
-ax.plot(xpt[1:],taichung,label=city[3],color='y')
-ax.plot(xpt[1:],tainan,label=city[4],color='k')
-ax.plot(xpt[1:],kaohsiung,label=city[5],color='c')
-ax.xaxis.set_major_locator(ticker.MultipleLocator(30))
+ax.plot(xpt[1:],taipei,label=city[0],color='g')#以綠線表示臺北市
+ax.plot(xpt[1:],new_taipei,label=city[1],color='r')#以紅線表示新北市
+ax.plot(xpt[1:],taoyuan,label=city[2],color='b')#以藍線表示桃園市
+ax.plot(xpt[1:],taichung,label=city[3],color='y')#以黃線表示臺中市
+ax.plot(xpt[1:],tainan,label=city[4],color='k')#以黑線表示臺南市
+ax.plot(xpt[1:],kaohsiung,label=city[5],color='c')#以藍綠色表示高雄市
+ax.xaxis.set_major_locator(ticker.MultipleLocator(30))#設定X軸標籤每30比顯示1比
 plt.xlabel('Date')
 plt.xticks(rotation='vertical')
 plt.ylabel('Temperature(℃)')
@@ -153,8 +153,3 @@ with open(args.output,'w',newline='') as csvfile:
     for i in range(len(xpt)-1):
         data_csv=[xpt[i+1],supply_pw[i],load_pw[i],temperature[i],T_holiday[i]]
         csv_write.writerow(data_csv)
-
-'''
-#正規化（備轉容量）
-ope_reserve=ope_reserve/np.max(ope_reserve)
-'''
