@@ -39,7 +39,7 @@
 |20190105|	27957|	26054|	2
 |20190106|	26950|	24617|	2
 ## 數據清洗
-由於資料中有許多訓練時用不到的數據，像是電力資料中各發電廠的發電量、天氣資料中測站位置資訊...等資料是我們不需要的，故先使用[**data_processing.py**](https://github.com/vf19961226/Electricity-Forecasting-DSAI-HW1-/blob/main/data_processing.py)去除不需要的數據，並將其整合為[**training_data.csv**](https://github.com/vf19961226/Electricity-Forecasting-DSAI-HW1-/blob/main/data/training_data.csv)輸出以方便後續訓練。  
+由於資料中有許多訓練時用不到的數據，像是電力資料中各發電廠的發電量、天氣資料中測站位置資訊...等資料是我們不需要的，故先使用[**data_processing.py**](https://github.com/vf19961226/Electricity-Forecasting-DSAI-HW1-/blob/main/data_processing.py)去除不需要的數據，並將其整合為[**training_data.csv**](https://github.com/vf19961226/Electricity-Forecasting-DSAI-HW1-/blob/main/data/training_data.csv)輸出以方便後續訓練，其中包含日期、備載容量、加權後之氣溫以及是否為工作日。  
 ### 環境要求
 
 | Name| Version
@@ -51,8 +51,9 @@
 |Name|Input|Default
 |:---:|---|---
 |--data1|電力資料|./data/台灣電力公司_過去電力供需資訊.csv
-|--data2|天氣資料所在資料夾|./data/Weather/
-|--data3|辦公日曆表所在資料夾|./data/Holiday/
+|--data2|至2021年3月21日之備載容量|./data/本年度每日尖峰備轉容量率.csv
+|--data3|天氣資料所在資料夾|./data/Weather/
+|--data4|辦公日曆表所在資料夾|./data/Holiday/
 |--output|輸出資料位置與名稱|./data/training_data.csv
 
 可於直接於終端機中執行以下指令，並將參數改成你的參數，或是直接使用我們的預設值而不輸入參數。  
@@ -61,12 +62,12 @@
 ### 輸出
 輸出之[**training_data.csv**](https://github.com/vf19961226/Electricity-Forecasting-DSAI-HW1-/blob/main/data/training_data.csv)格式如下表所示。
 
-| Date	| Supply Power	| Load Power	| Temperature| Holiday
-|---|:---:|:---:|:---:|:---:
-|20190101	|26429	|23872	|17.74420424	|2
-|20190102	|30047	|28148	|18.2230592	|0
-|20190103	|30343	|28452	|19.38603441	|0
-|20190104	|30301	|28490	|21.32012734	|0
-|20190105	|27957	|26054	|21.14159613	|2
-|20190106	|26950	|24617	|19.47684798	|2
+| Date	| Operating Reserve	| Temperature| Holiday
+|---|:---:|:---:|:---:
+|20190101	|2557|17.74420424	|2
+|20190102	|1899|18.2230592	|0
+|20190103	|1891|19.38603441	|0
+|20190104	|1811|21.32012734	|0
+|20190105	|1903|21.14159613	|2
+|20190106	|2333|19.47684798	|2
 ## 建立預測模型
