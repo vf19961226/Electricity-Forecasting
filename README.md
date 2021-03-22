@@ -71,6 +71,14 @@
 |20190105	|1903|21.14159613	|2
 |20190106	|2333|19.47684798	|2
 ## 建立預測模型
+### 環境要求
+| Name| Version
+|:---:|---:
+|Python|3.6.12
+|Numpy|1.19.2
+|Pandas|1.1.3
+|Keras|2.3.1
+|Matplotlib|3.3.4
 
 ### 數據前處理
 * 資料正規化   
@@ -91,3 +99,14 @@ def def splitData(X,Y,rate)
 ![GITHUB](https://github.com/vf19961226/Electricity-Forecasting/blob/main/figure/LSTM_architecture.png "LSTM_architecture")   
 * 損失函數表現  
 ![GITHUB](https://github.com/vf19961226/Electricity-Forecasting/blob/main/figure/power_prediction.png "power_prediction.png")
+
+### 命令參數
+
+|Name|Input|Default
+|:---:|---|---
+|--data|訓練資料|./data/training_data.csv
+|--output|輸出預測結果|submission.csv
+
+可於直接於終端機中執行以下指令，並將參數改成你的參數，或是直接使用我們的預設值而不輸入參數。  
+
+    python app.py --data "your training data" --output "your output data"
