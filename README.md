@@ -77,6 +77,17 @@
 ```
 train_norm = train.apply(lambda x: (x - np.mean(x)) / (np.max(x) - np.min(x)))
 ```  
-* 建立訓練集
-  以過去30天預測未來七天
-```def buildTrain(train,pastDay=30,futureDay=1)```
+* 建立訓練集  
+以過去30天預測未來七天  
+```
+def buildTrain(train,pastDay=30,futureDay=1)
+```
+* 分割數據   
+X_Train為訓練數據，Ｙ_Train為label(備轉容量），並將10%數據做為驗證用途
+```
+def def splitData(X,Y,rate)
+```
+* 建立模型架構 
+![GITHUB](https://github.com/vf19961226/Electricity-Forecasting/blob/main/figure/LSTM_architecture.png "LSTM_architecture")   
+* 損失函數表現  
+![GITHUB](https://github.com/vf19961226/Electricity-Forecasting/blob/main/figure/power_prediction.png "power_prediction.png")
