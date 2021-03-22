@@ -113,6 +113,7 @@ def splitData(X,Y,rate)
     python app.py --data "your training data" --output "your output data"
 
 ### 預測結果
+最終預測結果輸出為[**submission.csv**](https://github.com/vf19961226/Electricity-Forecasting/blob/main/submission.csv)，其內容如下表所示。
 
 | Date	| Operating Reserve(MW)
 |---|:---:
