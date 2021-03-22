@@ -74,7 +74,9 @@
 
 ### 數據前處理
 * 資料正規化   
->train_norm = train.apply(lambda x: (x - np.mean(x)) / (np.max(x) - np.min(x)))    
+```
+train_norm = train.apply(lambda x: (x - np.mean(x)) / (np.max(x) - np.min(x)))
+```  
 * 建立訓練集
   以過去30天預測未來七天
->def buildTrain(train,pastDay=30,futureDay=1):
+```def buildTrain(train,pastDay=30,futureDay=1)```
