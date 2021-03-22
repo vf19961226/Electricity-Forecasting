@@ -83,18 +83,18 @@
 
 ### 數據前處理
 * 資料正規化   
-```
+```py
 train_norm = train.apply(lambda x: (x - np.mean(x)) / (np.max(x) - np.min(x)))
 ```  
 * 建立訓練集  
 以過去30天預測未來七天  
-```
+```py
 def buildTrain(train,pastDay=30,futureDay=1)
 ```
 * 分割數據   
 X_Train為訓練數據，Ｙ_Train為label(備轉容量），並將10%數據做為驗證用途
-```
-def def splitData(X,Y,rate)
+```py
+def splitData(X,Y,rate)
 ```
 * 建立模型架構 
 ![GITHUB](https://github.com/vf19961226/Electricity-Forecasting/blob/main/figure/LSTM_architecture.png "LSTM_architecture")   
@@ -111,3 +111,16 @@ def def splitData(X,Y,rate)
 可於直接於終端機中執行以下指令，並將參數改成你的參數，或是直接使用我們的預設值而不輸入參數。  
 
     python app.py --data "your training data" --output "your output data"
+
+### 預測結果
+
+| Date	| Operating Reserve(MW)
+|---|:---:
+|20210323	|
+|20210324	|
+|20210325	|
+|20210326	|
+|20210327	|
+|20210328	|
+|20210329	|
+|20190106	|
