@@ -58,7 +58,7 @@
 
 可於直接於終端機中執行以下指令，並將參數改成你的參數，或是直接使用我們的預設值而不輸入參數。  
 
-    python data_processing.py --data1 "your power data" --data2 "your weather data" --data3 "your holiday data" --output "your output data"
+    python data_processing.py --data1 "your power data" --data2 "your operating reserve data" --data3 "your weather data" --data4 "your holiday data" --output "your output data"
 ### 輸出
 輸出之[**training_data.csv**](https://github.com/vf19961226/Electricity-Forecasting-DSAI-HW1-/blob/main/data/training_data.csv)格式如下表所示。
 
