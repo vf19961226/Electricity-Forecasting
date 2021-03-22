@@ -71,6 +71,7 @@
 |20190105	|1903|21.14159613	|2
 |20190106	|2333|19.47684798	|2
 ## 建立預測模型
+利用上述整理好的[**training_data.csv**](https://github.com/vf19961226/Electricity-Forecasting-DSAI-HW1-/blob/main/data/training_data.csv)於[**app.py**](https://github.com/vf19961226/Electricity-Forecasting)中進行模型訓練與預測。在[**app.py**](https://github.com/vf19961226/Electricity-Forecasting)中將數據進行正規化後切割成訓練與測試兩組，使用長短期記憶（Long Short-Term Memory，LSTM）建立一預測模型，用以預測未來七天之電力備轉容量。
 ### 環境要求
 | Name| Version
 |:---:|---:
