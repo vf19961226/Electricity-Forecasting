@@ -7,7 +7,6 @@ import pandas as pd
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense, LSTM, TimeDistributed
-#from keras.optimizers import Adam
 from keras.callbacks import EarlyStopping
 import matplotlib.pyplot as plt
 import argparse
