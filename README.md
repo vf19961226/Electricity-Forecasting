@@ -73,7 +73,6 @@
 ## 建立預測模型
 
 ### 數據前處理
-*資料正規化
-‘’‘python
-train_norm = train.apply(lambda x: (x - np.mean(x)) / (np.max(x) - np.min(x)))
-'''
+* 資料正規化
+    train_norm = train.apply(lambda x: (x - np.mean(x)) / (np.max(x) - np.min(x)))
+
