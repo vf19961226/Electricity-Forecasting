@@ -72,4 +72,8 @@
 |20190106	|2333|19.47684798	|2
 ## 建立預測模型
 
-###數據前處理
+### 數據前處理
+*資料正規化
+‘’‘python
+train_norm = train.apply(lambda x: (x - np.mean(x)) / (np.max(x) - np.min(x)))
+'''
