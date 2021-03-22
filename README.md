@@ -71,7 +71,7 @@
 |20190105	|1903|21.14159613	|2
 |20190106	|2333|19.47684798	|2
 ## 建立預測模型
-利用上述整理好的[**training_data.csv**](https://github.com/vf19961226/Electricity-Forecasting-DSAI-HW1-/blob/main/data/training_data.csv)於[**app.py**](https://github.com/vf19961226/Electricity-Forecasting)中進行模型訓練與預測。在[**app.py**](https://github.com/vf19961226/Electricity-Forecasting)中將數據進行正規化後切割成訓練與測試兩組，使用長短期記憶（Long Short-Term Memory，LSTM）建立一預測模型，用以預測未來七天之電力備轉容量。
+利用上述整理好的[**training_data.csv**](https://github.com/vf19961226/Electricity-Forecasting-DSAI-HW1-/blob/main/data/training_data.csv)於[**app.py**](https://github.com/vf19961226/Electricity-Forecasting/blob/main/app.py)中進行模型訓練與預測。在[**app.py**](https://github.com/vf19961226/Electricity-Forecasting/blob/main/app.py)中將數據進行正規化後切割成訓練與測試兩組，使用長短期記憶（Long Short-Term Memory，LSTM）建立一預測模型，用以預測未來七天之電力備轉容量。
 ### 環境要求
 | Name| Version
 |:---:|---:
@@ -116,11 +116,10 @@ def splitData(X,Y,rate)
 
 | Date	| Operating Reserve(MW)
 |---|:---:
-|20210323	|
-|20210324	|
-|20210325	|
-|20210326	|
-|20210327	|
-|20210328	|
-|20210329	|
-|20190106	|
+|20210323	|3004.835
+|20210324	|3026.092
+|20210325	|3070.138
+|20210326	|3051.111
+|20210327	|3004.584
+|20210328	|2934.29
+|20210329	|2893.141
