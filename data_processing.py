@@ -122,10 +122,10 @@ p_taoyuan=2269948
 p_taichung=2821464
 p_tainan=1873043
 p_kaohsiung=2763057
-p_totel=p_taipei+p_new_taipei+p_taoyuan+p_taichung+p_tainan+p_kaohsiung
+p_total=p_taipei+p_new_taipei+p_taoyuan+p_taichung+p_tainan+p_kaohsiung
 temperature=[]
 for i in range(len(xpt)-1):
-    t_average=(taipei[i]*p_taipei+new_taipei[i]*p_new_taipei+taoyuan[i]*p_taoyuan+taichung[i]*p_taichung+tainan[i]*p_tainan+kaohsiung[i]*p_kaohsiung)/p_totel
+    t_average=(taipei[i]*p_taipei+new_taipei[i]*p_new_taipei+taoyuan[i]*p_taoyuan+taichung[i]*p_taichung+tainan[i]*p_tainan+kaohsiung[i]*p_kaohsiung)/p_total
     temperature.append(t_average)
     
 #是否為假日（民國108年至民國110年）（0為上班日、2為假日）（資料來源：行政院人事行政總處）
